@@ -1,0 +1,6 @@
+name: free-hosting
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+description: A minimal JavaScript Pulumi program

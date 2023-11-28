@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Hosting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <h3>Welcome, <%= userData.username %></h3>
+    <a href="/host/static" class="btn btn-primary" role="btn"
+      >New Static website</a
+    >
+    <a href="/host/webService" class="btn btn-primary" role="btn"
+      >New Web Service</a
+    >
+    <a href="/host/delete" class="btn btn-danger" role="btn">Delete All</a
+    ><br /><br />
+    <table class="table table-striped">
+      <th>Title</th>
+      <th>URL</th>
+      <th>Edit</th>
+      <%userData.sites.forEach(site=>{%>
+      <tr>
+        <td><%= site.title%></td>
+        <td>
+          <a href="http://<%= site.hostUrl%>" target="_blank">Link</a>
+        </td>
+        <td><a href="/host/edit/<%= site.title%>">Edit</a></td>
+      </tr>
+      <%})%>
+    </table>
+  </body>
+</html>

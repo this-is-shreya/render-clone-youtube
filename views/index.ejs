@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Hosting</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="col s12 m6 offset-m3 center-align">
+        <h3 class="text-body-secondary">Welcome to Free Hosting</h3>
+        <a
+          class="oauth-container btn darken-4 white black-text"
+          href="https://github.com/login/oauth/authorize?client_id=<%= client_id %>"
+          style="text-transform: none"
+        >
+          <div class="left">
+            <img
+              width="20px"
+              style="margin-top: 7px; margin-right: 8px"
+              alt="Github sign-in"
+              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            />
+          </div>
+          Login with Github
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
